@@ -1,0 +1,21 @@
+.principal{
+    background: rgb(179,84,233);
+    background: linear-gradient(10deg, rgba(179,84,233,1) 19%, rgba(6,67,159,1) 24%, rgba(6,76,165,1) 35%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 75%); 
+}
+
+
+
+.cabecalho{
+    font-size:40px;
+    background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 13%, rgba(0,212,255,1) 80%);
+    padding: 20px;
+    border-radius:70px;
+    margin: 20px;
+    color: aliceblue;
+    -webkit-box-shadow:-12px 10px 9px 0px rgba(50, 50, 50, 0.95);
+    -moz-box-shadow:-12px 10px 9px 0px rgba(50, 50, 50, 0.95);
+    box-shadow:-12px 10px 9px 0px rgba(50, 50, 50, 0.95);
+}
+a{
+    text-decoration:none;
+}
