@@ -10,6 +10,7 @@
     </head>
 
     <body>
+        
         <div class="principal container-fluid">
             <!-- Cabecalho -->
             <div class="row">
@@ -20,11 +21,52 @@
                 </div>
             </div>
             <!-- Fim cabecalho -->
+             
+            
+            <!-- Plataformas -->
+            <div class="row" style="margin-top:20px;">
+                <div class="col-md-4"></div>
+
+                <div class="card-group col-md-8 alinharCentro">
+
+                    <a href="/jogos?platform=pc" class="jogoSelecao">
+                        <div class="card">
+                            <img src="../static/img/silhueta-do-logotipo-do-windows.png" class=" iconesPlataform card-img-top" alt="pc">
+                            <div class="card-body">
+                                <h5 class="card-title">Pc</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/jogos?platform=browser" class="jogoSelecao">
+                        <div class="card">
+                            <img src="../static/img/browser.png" class="iconesPlataform card-img-top" alt="Navegador">
+                            <div class="card-body">
+                                <h5 class="card-title">Navegador</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/jogos?platform=all" class="jogoSelecao">
+                        <div class="card">
+                            <p>
+                                <img src="../static/img/browser.png" class="iconesPlataformMenor card-img-top" alt="Navegador">
+                                <img src="../static/img/silhueta-do-logotipo-do-windows.png" class="iconesPlataformMenor card-img-top" alt="pc">
+                            </p>
+                            <div class="card-body">
+                                <h5 class="card-title">Todos</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                
+                
+            </div>
+            <!-- Fim plataformas -->
 
             <!-- Disposição dos jogos mais populares -->
             <div class="row" style="margin-top:25px;">
-               <div class="col-md-1"></div> 
-               <div class="col-md-10">
+               <div class="col-md-12">
 
                    <div id="jogosPopulares" class="carousel carousel-dark slide" data-bs-ride="carousel">
                        <div class="carousel-inner">
@@ -33,7 +75,7 @@
                                 <div class="card-group">
                                     {%for jogo in jogos1%}
                                         <a href="/detalheJogo?id={{jogo.id}}" class="jogoSelecao">
-                                            <div class="card">
+                                            <div class="cardTam card">
                                                 <img src="{{jogo.thumbnail}}" class="card-img-top" alt="{{jogo.title}}">
                                                 <div class="card-body">
                                                     <h5 class="card-title">{{jogo.title}}</h5>
@@ -57,7 +99,7 @@
                                 <div class="card-group">
                                     {%for jogo in jogos2%}
                                         <a href="/detalheJogo?id={{jogo.id}}" class="jogoSelecao">
-                                            <div class="card">
+                                            <div class="cardTam card">
                                                 <img src="{{jogo.thumbnail}}" class="card-img-top" alt="{{jogo.title}}">
                                                 <div class="card-body">
                                                     <h5 class="card-title">{{jogo.title}}</h5>
@@ -79,40 +121,16 @@
                    </div>
 
                </div> 
-               <div class="col-md-1"></div> 
             </div>
             <!-- Fim jogos mais populares -->
+            
+            <!-- Footer -->
+            <footer class="footer alinharCentro">
+                <p>Aquiles Aguiar & Matheus Oliveira - 2021</p>
 
-            <!-- Plataformas -->
-            <div class="row" style="margin-top:40px;">
-                <div class="col-md-2"></div>
-
-                <div class="col-md-3">
-                    <a href="/jogos?plataform=pc">
-                        <button class="btn btn-primary alinharCentro">Pc</button>   
-                    </a>
-                </div>
-            
-
-            
-                <div class="col-md-3">
-                    <a href="/jogos?plataform=browser">
-                        <button class="btn btn-primary alinharCentro">Navegador</button>   
-                    </a>
-                </div>
-            
-            
-            
-                <div class="col-md-3">
-                    <a href="/jogos?plataform=all">
-                        <button class="btn btn-primary alinharCentro">Todos</button>   
-                    </a>
-                </div>
-                
-
-                <div class="col-md-1"></div>
-            </div>
-            <!-- Fim plataformas -->
+                <div>Icons made by <a href="https://www.flaticon.com/authors/webalys" title="Webalys">Webalys</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            </footer>
+            <!-- Fim footer -->
         </div>
     </body>
     

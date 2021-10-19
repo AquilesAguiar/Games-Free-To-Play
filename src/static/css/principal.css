@@ -1,6 +1,11 @@
 body{
+    /* height: 927px; */
     background: rgb(179,84,233);
-    background: linear-gradient(10deg, rgba(179,84,233,1) 19%, rgba(6,67,159,1) 24%, rgba(6,76,165,1) 35%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 75%); 
+    background: linear-gradient(10deg, rgba(179,84,233,1) 19%, rgba(6,67,159,1) 24%, rgba(6,76,165,1) 35%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 75%) no-repeat; 
+}
+
+.padding-20{
+    padding:20px ;
 }
 
 .cabecalho{
@@ -16,15 +21,44 @@ body{
 a{
     text-decoration:none;
 }
+
 .linkPagJogo{
     font-size: 20px;
     color: purple;
     text-align: center;
 }
+.jogoSelecao{
+    margin: 20px ;
+}
 .jogoSelecao:hover{
     opacity: 20%;
 }
 
+.cardTam{
+    width:200px !important;
+}
+
 .alinharCentro{
     text-align: center;
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.iconesPlataform{
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 75px;
+}
+
+.iconesPlataformMenor{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 60px;
 }
