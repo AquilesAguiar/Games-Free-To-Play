@@ -22,7 +22,7 @@
             <!-- Fim cabecalho -->
 
             <!-- Disposição dos jogos mais populares -->
-            <div class="row" style="margin-top:85px">
+            <div class="row" style="margin-top:25px;">
                <div class="col-md-1"></div> 
                <div class="col-md-10">
 
@@ -30,22 +30,52 @@
                        <div class="carousel-inner">
                            
                            <div class="carousel-item active">
-           
+                                <div class="card-group">
+                                    {%for jogo in jogos1%}
+                                        <a href="/detalheJogo?id={{jogo.id}}" class="jogoSelecao">
+                                            <div class="card">
+                                                <img src="{{jogo.thumbnail}}" class="card-img-top" alt="{{jogo.title}}">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{jogo.title}}</h5>
+                                                    <p class="card-text">{{jogo.short_description}}</p>
+                                                    <p class="card-text">{{jogo.genre}}</p>
+                                                    <p class="card-text">{{jogo.platform}}</p>
+                                                    <p class="card-text">{{jogo.developer}}</p>
+                                                    <a href="{{jogo.game_url}}" class="linkPagJogo" target="_blank">Ver site jogo</a>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-muted">{{jogo.release_date}}</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    {%endfor%}
+                                    
+                                </div>
                            </div>
            
                            <div class="carousel-item">
-           
+                                <div class="card-group">
+                                    {%for jogo in jogos2%}
+                                        <a href="/detalheJogo?id={{jogo.id}}" class="jogoSelecao">
+                                            <div class="card">
+                                                <img src="{{jogo.thumbnail}}" class="card-img-top" alt="{{jogo.title}}">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{jogo.title}}</h5>
+                                                    <p class="card-text">Descrição:{{jogo.short_description}}</p>
+                                                    <p class="card-text">{{jogo.genre}}</p>
+                                                    <p class="card-text">{{jogo.platform}}</p>
+                                                    <p class="card-text">{{jogo.developer}}</p>
+                                                    <a href="{{jogo.game_url}}" class="linkPagJogo" target="_blank">Ver site jogo</a>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <small class="text-muted">{{jogo.release_date}}</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    {%endfor%}
+                                </div>
                            </div>
-           
                        </div>
-                       <button class="carousel-control-prev" type="button" data-bs-target="#jogosPopulares" data-bs-slide="prev">
-                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                           <span class="visually-hidden">anterior</span>
-                       </button>
-                       <button class="carousel-control-next" type="button" data-bs-target="#jogosPopulares" data-bs-slide="next">
-                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                           <span class="visually-hidden">proximo</span>
-                       </button>
                    </div>
 
                </div> 
@@ -53,7 +83,36 @@
             </div>
             <!-- Fim jogos mais populares -->
 
-            <div class="row"></div>
+            <!-- Plataformas -->
+            <div class="row" style="margin-top:40px;">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3">
+                    <a href="/jogos?plataform=pc"></a>
+                        <button class="btn btn-primary alinharCentro">Pc</button>   
+                    </a>
+                </div>
+            
+
+            
+                <div class="col-md-3">
+                    <a href="/jogos?plataform=browser"></a>
+                        <button class="btn btn-primary alinharCentro">Navegador</button>   
+                    </a>
+                </div>
+            
+            
+            
+                <div class="col-md-3">
+                    <a href="/jogos?plataform=all"></a>
+                        <button class="btn btn-primary alinharCentro">Todos</button>   
+                    </a>
+                </div>
+                
+
+                <div class="col-md-1"></div>
+            </div>
+            <!-- Fim plataformas -->
         </div>
     </body>
     
