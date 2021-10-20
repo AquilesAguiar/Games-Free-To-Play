@@ -1,7 +1,14 @@
-body{
-    /* height: 927px; */
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Roboto&display=swap');
+
+html{
     background: rgb(179,84,233);
     background: linear-gradient(10deg, rgba(179,84,233,1) 19%, rgba(6,67,159,1) 24%, rgba(6,76,165,1) 35%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 75%) no-repeat; 
+}
+
+body{
+    background: rgb(179,84,233);
+    background: linear-gradient(10deg, rgba(179,84,233,1) 19%, rgba(6,67,159,1) 24%, rgba(6,76,165,1) 35%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 75%) no-repeat; 
+    font-family: 'Roboto', sans-serif;
 }
 
 .padding-20{
@@ -9,7 +16,8 @@ body{
 }
 
 .cabecalho{
-    font-size:40px;
+    font-family: 'Festive', cursive !important;
+    font-size: 40pt;
     background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 13%, rgba(0,212,255,1) 80%);
     padding: 20px;
     border-radius:70px;
@@ -62,3 +70,14 @@ a{
     width: 75px;
     height: 60px;
 }
+
+.card-tam{
+    width: 200px !important; 
+    height: 600px !important;
+}
+
+.card-tam-jogo{
+    width: 700px !important; 
+    height: 700px !important;
+}
+

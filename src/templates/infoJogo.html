@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/principal.css')}}" />
+    <title>FreeToPlay - Jogos</title>
+</head>
+
+<body>
+    <div class="principal container-fluid">
+        <!-- Cabecalho -->
+        <div class="row">
+            <div class="col-md-12">
+                <header class="cabecalho text-center">
+                    <span style="color: blue">Free</span>ToPlay
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim cabecalho -->
+
+    <!-- Main -->
+    <div class="d-flex justify-content-center">
+        <div class="card card-tam-jogo mt-5">
+            <img src="{{jogo.thumbnail}}" class="card-img-top" alt="{{jogo.title}}" />
+            <div class="card-body">
+                <h5 class="card-title">{{jogo.title}}</h5>
+                <p class="card-text">{{jogo.short_description}}</p>
+                <p class="card-text">{{jogo.genre}}</p>
+                <p class="card-text">{{jogo.platform}}</p>
+                <p class="card-text">{{jogo.developer}}</p>
+                <a href="{{jogo.game_url}}" class="linkPagJogo" target="_blank">Ver site jogo</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{jogo.release_date}}</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Requisitos</h5>
+                <p class="card-text">{{jogo.minimum_system_requirements.os}}</p>
+                <p class="card-text">{{jogo.minimum_system_requirements.processor}}</p>
+                <p class="card-text">{{jogo.minimum_system_requirements.memory}}</p>
+                <p class="card-text">{{jogo.minimum_system_requirements.graphics}}</p>
+                <p class="card-text">{{jogo.minimum_system_requirements.storage}}</p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+        {%for item in jogo.screenshots%}
+        <div class="row">
+            <img class="col" src="{{item.image}}" alt="{{item.id}}" />
+        </div>
+        <br>
+        {%endfor%}
+    </div>
+
+    <!-- Fim Main -->
+
+    <!-- Footer -->
+    <footer class="footer container-fluid">
+        <p>Aquiles Aguiar & Matheus Oliveira - 2021</p>
+
+        <div>
+            Icons made by
+            <a href="https://www.flaticon.com/authors/webalys" title="Webalys">Webalys</a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </footer>
+    <!-- Fim footer -->
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>

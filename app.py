@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_ngrok import run_with_ngrok
+# from flask_ngrok import run_with_ngrok
 from src.routes.index import index
 from src.routes.jogos import jogos
 from src.routes.detalheJogo import detalheJogo
